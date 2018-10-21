@@ -1,0 +1,31 @@
+Sample data:
+2018-10-01,34.29,Groceries,Loblaws
+2018-10-01,133.99,Restaurant,The Keg
+2018-10-04,1.99,Entertainment,Amazon
+2018-10-15,54.00,Groceries,Loblaws
+2018-11-15,11.67,Health,Loblaws
+
+Sample output:
+{
+  "2018": {
+    "total": 235.94
+    "October": {
+      "total": 224.27,
+      "byCategory": {
+        "Groceries": 88.29,
+        "Restaurant": 133.99,
+        "Entertainment": 1.99
+      },
+      "byMerchant": {
+        "Loblaws": ...,
+        "The Keg": ...
+        ...
+      }
+    },
+    "November": {
+      "total": ...,
+      "byCategory": {...},
+      "byMerchant": {...}
+    }
+  }
+}
