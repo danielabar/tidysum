@@ -6,5 +6,8 @@ const processExpenses = require('./lib/process-expenses');
 if (!argv.expenseFile) {
   console.log('Specify path to expenseFile');
 } else {
-  processExpenses.processFile(argv.expenseFile);
+  // await processExpenses.processFile(argv.expenseFile);
+  (async () => {
+    await processExpenses.processFile(argv.expenseFile);
+  })();
 }
