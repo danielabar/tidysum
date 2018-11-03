@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // ref: https://scotch.io/@Youngestdev/how-to-build-a-nodejs-commandline-apps-with-yargs
+const fs = require('fs');
 const argv = require('yargs')
   .usage('Usage: $0 option expenseFile \n e.g $0 -e /path/to/csv')
   .alias('e', 'expenseFile')
@@ -9,8 +10,9 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help').argv;
 const processExpenses = require('./lib/process-expenses');
+
 (async () => {
   const result = await processExpenses.processFile(argv.e);
-  // TODO write result to output file
   console.log(JSON.stringify(result, null, 2)); // eslint-disable-line no-console
+  fs.writeFileSync('expenses.json', JSON.stringify(result, null, 2), 'utf8');
 })();
