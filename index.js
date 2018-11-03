@@ -8,12 +8,9 @@ const argv = require('yargs')
   .demandOption(['e'])
   .help('h')
   .alias('h', 'help').argv;
-// const logger = require('./lib/logger');
 const processExpenses = require('./lib/process-expenses');
-
 (async () => {
-  const result = await processExpenses.processFile(argv.expenseFile);
+  const result = await processExpenses.processFile(argv.e);
   // TODO write result to output file
-  // logger.info('result', { data: result });
   console.log(JSON.stringify(result, null, 2)); // eslint-disable-line no-console
 })();

@@ -16,6 +16,7 @@
   "author": "Daniela Baron",
   "license": "MIT",
   "dependencies": {
+    "csv-streamify": "4.0.0",
     "decimal.js": "10.0.1",
     "eslint": "5.7.0",
     "moment": "2.22.2",
