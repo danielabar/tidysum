@@ -1,8 +1,11 @@
 {
-  "name": "expense-categorization",
+  "name": "tidysum",
   "version": "0.0.1",
   "description": "Break down expenses into categories",
   "main": "index.js",
+  "bin": {
+    "tidysum": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
