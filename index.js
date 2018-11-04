@@ -10,9 +10,10 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help').argv;
 const processExpenses = require('./lib/process-expenses');
+const calculator = require('./lib/calculator');
 
 (async () => {
-  const result = await processExpenses.processFile(argv.e);
-  console.log(JSON.stringify(result, null, 2)); // eslint-disable-line no-console
+  const intermediate = await processExpenses.processFile(argv.e);
+  const result = calculator.calcAvg(JSON.parse(JSON.stringify(intermediate)));
   fs.writeFileSync('expenses.json', JSON.stringify(result, null, 2), 'utf8');
 })();
