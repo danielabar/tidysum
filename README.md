@@ -8,7 +8,7 @@
 tidysum --e /path/to/expenses.csv
 ```
 
-Where `expenses.csv` contains entries with date (YYYY-MM-DD), amount, category and merchant.
+Where `expenses.csv` contains entries with date (YYYY-MM-DD), amount, category and merchant as per the example below:
 
 ```
 2018-10-01,34.29,Groceries,Loblaws
@@ -18,9 +18,14 @@ Where `expenses.csv` contains entries with date (YYYY-MM-DD), amount, category a
 2018-11-15,11.67,Health,Loblaws
 ```
 
+This will generate `expenses.json` with yearly and monthly breakdowns and averages per year.
+
 ## Development
 
 ```shell
 npm i
 npm link
+node generate-sample-data.js
+tidysum -e data/sample-data.csv
+# check expenses.json for output
 ```
