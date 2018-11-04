@@ -1,0 +1,783 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`processExpenses processFile Processes a small file with two months in each of two years 1`] = `
+"{
+  \\"2017\\": {
+    \\"total\\": \\"50\\",
+    \\"Jan\\": {
+      \\"total\\": \\"30\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10\\",
+        \\"Food\\": \\"20\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"10\\",
+        \\"Merchant B\\": \\"20\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"20\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10\\",
+        \\"Entertainment\\": \\"10\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"10\\",
+        \\"Merchant C\\": \\"10\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"25.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10.00\\",
+        \\"Food\\": \\"10.00\\",
+        \\"Entertainment\\": \\"5.00\\"
+      }
+    }
+  },
+  \\"2018\\": {
+    \\"total\\": \\"70\\",
+    \\"Jan\\": {
+      \\"total\\": \\"40\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15\\",
+        \\"Food\\": \\"25\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"15\\",
+        \\"Merchant B\\": \\"25\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"30\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15\\",
+        \\"Entertainment\\": \\"15\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"15\\",
+        \\"Merchant C\\": \\"15\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"35.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15.00\\",
+        \\"Food\\": \\"12.50\\",
+        \\"Entertainment\\": \\"7.50\\"
+      }
+    }
+  }
+}"
+`;
+
+exports[`processExpenses processFile Processes demo data 1`] = `
+"{
+  \\"2018\\": {
+    \\"total\\": \\"239.94\\",
+    \\"Oct\\": {
+      \\"total\\": \\"228.27\\",
+      \\"byCategory\\": {
+        \\"Groceries\\": \\"88.29\\",
+        \\"Restaurant\\": \\"133.99\\",
+        \\"Entertainment\\": \\"5.99\\"
+      },
+      \\"byMerchant\\": {
+        \\"Loblaws\\": \\"88.29\\",
+        \\"The Keg\\": \\"133.99\\",
+        \\"Amazon\\": \\"5.99\\"
+      }
+    },
+    \\"Nov\\": {
+      \\"total\\": \\"11.67\\",
+      \\"byCategory\\": {
+        \\"Health\\": \\"11.67\\"
+      },
+      \\"byMerchant\\": {
+        \\"Loblaws\\": \\"11.67\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"119.97\\",
+      \\"byCategory\\": {
+        \\"Groceries\\": \\"44.15\\",
+        \\"Restaurant\\": \\"67.00\\",
+        \\"Entertainment\\": \\"3.00\\",
+        \\"Health\\": \\"5.84\\"
+      }
+    }
+  }
+}"
+`;
+
+exports[`processExpenses processFile Processes large data 1`] = `
+"{
+  \\"2016\\": {
+    \\"total\\": \\"47180\\",
+    \\"Jan\\": {
+      \\"total\\": \\"4054\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3009\\",
+        \\"Food\\": \\"675\\",
+        \\"Gifts\\": \\"98\\",
+        \\"Entertainment\\": \\"38\\",
+        \\"Transportation\\": \\"234\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"3489\\",
+        \\"Merchant A\\": \\"256\\",
+        \\"Merchant D\\": \\"58\\",
+        \\"Merchant F\\": \\"235\\",
+        \\"Merchant C\\": \\"16\\"
+      }
+    },
+    \\"Feb\\": {
+      \\"total\\": \\"4051\\",
+      \\"byCategory\\": {
+        \\"Entertainment\\": \\"197\\",
+        \\"Clothing\\": \\"3496\\",
+        \\"Transportation\\": \\"227\\",
+        \\"Gifts\\": \\"131\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant E\\": \\"47\\",
+        \\"Merchant B\\": \\"2444\\",
+        \\"Merchant A\\": \\"605\\",
+        \\"Merchant C\\": \\"569\\",
+        \\"Merchant F\\": \\"386\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"4900\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3411\\",
+        \\"Gifts\\": \\"67\\",
+        \\"Food\\": \\"612\\",
+        \\"Transportation\\": \\"789\\",
+        \\"Entertainment\\": \\"21\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"3269\\",
+        \\"Merchant D\\": \\"586\\",
+        \\"Merchant C\\": \\"142\\",
+        \\"Merchant E\\": \\"290\\",
+        \\"Merchant A\\": \\"476\\",
+        \\"Merchant F\\": \\"137\\"
+      }
+    },
+    \\"Apr\\": {
+      \\"total\\": \\"3414\\",
+      \\"byCategory\\": {
+        \\"Transportation\\": \\"385\\",
+        \\"Clothing\\": \\"2109\\",
+        \\"Gifts\\": \\"204\\",
+        \\"Food\\": \\"300\\",
+        \\"Entertainment\\": \\"416\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"606\\",
+        \\"Merchant B\\": \\"1897\\",
+        \\"Merchant E\\": \\"346\\",
+        \\"Merchant C\\": \\"189\\",
+        \\"Merchant D\\": \\"94\\",
+        \\"Merchant F\\": \\"282\\"
+      }
+    },
+    \\"May\\": {
+      \\"total\\": \\"3631\\",
+      \\"byCategory\\": {
+        \\"Gifts\\": \\"161\\",
+        \\"Clothing\\": \\"2127\\",
+        \\"Entertainment\\": \\"597\\",
+        \\"Transportation\\": \\"397\\",
+        \\"Food\\": \\"349\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2167\\",
+        \\"Merchant F\\": \\"464\\",
+        \\"Merchant C\\": \\"29\\",
+        \\"Merchant D\\": \\"114\\",
+        \\"Merchant A\\": \\"348\\",
+        \\"Merchant E\\": \\"509\\"
+      }
+    },
+    \\"Jun\\": {
+      \\"total\\": \\"3529\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2138\\",
+        \\"Food\\": \\"171\\",
+        \\"Transportation\\": \\"1182\\",
+        \\"Gifts\\": \\"38\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2457\\",
+        \\"Merchant A\\": \\"144\\",
+        \\"Merchant D\\": \\"352\\",
+        \\"Merchant E\\": \\"392\\",
+        \\"Merchant F\\": \\"146\\",
+        \\"Merchant C\\": \\"38\\"
+      }
+    },
+    \\"Jul\\": {
+      \\"total\\": \\"4289\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2818\\",
+        \\"Gifts\\": \\"87\\",
+        \\"Food\\": \\"317\\",
+        \\"Entertainment\\": \\"531\\",
+        \\"Transportation\\": \\"536\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2704\\",
+        \\"Merchant E\\": \\"370\\",
+        \\"Merchant D\\": \\"405\\",
+        \\"Merchant F\\": \\"611\\",
+        \\"Merchant A\\": \\"173\\",
+        \\"Merchant C\\": \\"26\\"
+      }
+    },
+    \\"Aug\\": {
+      \\"total\\": \\"3934\\",
+      \\"byCategory\\": {
+        \\"Gifts\\": \\"105\\",
+        \\"Clothing\\": \\"2472\\",
+        \\"Food\\": \\"736\\",
+        \\"Entertainment\\": \\"259\\",
+        \\"Transportation\\": \\"362\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant E\\": \\"287\\",
+        \\"Merchant B\\": \\"2207\\",
+        \\"Merchant C\\": \\"557\\",
+        \\"Merchant F\\": \\"270\\",
+        \\"Merchant A\\": \\"496\\",
+        \\"Merchant D\\": \\"117\\"
+      }
+    },
+    \\"Sep\\": {
+      \\"total\\": \\"3854\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2682\\",
+        \\"Gifts\\": \\"73\\",
+        \\"Transportation\\": \\"566\\",
+        \\"Food\\": \\"374\\",
+        \\"Entertainment\\": \\"159\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2716\\",
+        \\"Merchant C\\": \\"333\\",
+        \\"Merchant F\\": \\"472\\",
+        \\"Merchant A\\": \\"72\\",
+        \\"Merchant E\\": \\"162\\",
+        \\"Merchant D\\": \\"99\\"
+      }
+    },
+    \\"Oct\\": {
+      \\"total\\": \\"4189\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3127\\",
+        \\"Entertainment\\": \\"470\\",
+        \\"Transportation\\": \\"231\\",
+        \\"Food\\": \\"242\\",
+        \\"Gifts\\": \\"119\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"3098\\",
+        \\"Merchant A\\": \\"260\\",
+        \\"Merchant D\\": \\"296\\",
+        \\"Merchant E\\": \\"265\\",
+        \\"Merchant C\\": \\"105\\",
+        \\"Merchant F\\": \\"165\\"
+      }
+    },
+    \\"Nov\\": {
+      \\"total\\": \\"3728\\",
+      \\"byCategory\\": {
+        \\"Food\\": \\"117\\",
+        \\"Clothing\\": \\"2391\\",
+        \\"Entertainment\\": \\"1182\\",
+        \\"Transportation\\": \\"20\\",
+        \\"Gifts\\": \\"18\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"1127\\",
+        \\"Merchant B\\": \\"1890\\",
+        \\"Merchant D\\": \\"45\\",
+        \\"Merchant E\\": \\"498\\",
+        \\"Merchant C\\": \\"153\\",
+        \\"Merchant F\\": \\"15\\"
+      }
+    },
+    \\"Dec\\": {
+      \\"total\\": \\"3607\\",
+      \\"byCategory\\": {
+        \\"Food\\": \\"881\\",
+        \\"Clothing\\": \\"1993\\",
+        \\"Gifts\\": \\"151\\",
+        \\"Transportation\\": \\"222\\",
+        \\"Entertainment\\": \\"360\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant F\\": \\"333\\",
+        \\"Merchant B\\": \\"2416\\",
+        \\"Merchant E\\": \\"148\\",
+        \\"Merchant A\\": \\"75\\",
+        \\"Merchant D\\": \\"40\\",
+        \\"Merchant C\\": \\"595\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"3931.67\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2647.75\\",
+        \\"Food\\": \\"397.83\\",
+        \\"Gifts\\": \\"104.33\\",
+        \\"Entertainment\\": \\"352.50\\",
+        \\"Transportation\\": \\"429.25\\"
+      }
+    }
+  },
+  \\"2017\\": {
+    \\"total\\": \\"49807\\",
+    \\"Jan\\": {
+      \\"total\\": \\"3339\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2141\\",
+        \\"Gifts\\": \\"130\\",
+        \\"Food\\": \\"541\\",
+        \\"Entertainment\\": \\"346\\",
+        \\"Transportation\\": \\"181\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2281\\",
+        \\"Merchant E\\": \\"217\\",
+        \\"Merchant D\\": \\"254\\",
+        \\"Merchant C\\": \\"244\\",
+        \\"Merchant F\\": \\"330\\",
+        \\"Merchant A\\": \\"13\\"
+      }
+    },
+    \\"Feb\\": {
+      \\"total\\": \\"3451\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2190\\",
+        \\"Transportation\\": \\"729\\",
+        \\"Gifts\\": \\"91\\",
+        \\"Entertainment\\": \\"60\\",
+        \\"Food\\": \\"381\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant C\\": \\"177\\",
+        \\"Merchant B\\": \\"2612\\",
+        \\"Merchant A\\": \\"38\\",
+        \\"Merchant F\\": \\"163\\",
+        \\"Merchant D\\": \\"217\\",
+        \\"Merchant E\\": \\"244\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"3293\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2765\\",
+        \\"Transportation\\": \\"298\\",
+        \\"Food\\": \\"39\\",
+        \\"Entertainment\\": \\"160\\",
+        \\"Gifts\\": \\"31\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant E\\": \\"224\\",
+        \\"Merchant B\\": \\"2688\\",
+        \\"Merchant F\\": \\"263\\",
+        \\"Merchant C\\": \\"89\\",
+        \\"Merchant D\\": \\"23\\",
+        \\"Merchant A\\": \\"6\\"
+      }
+    },
+    \\"Apr\\": {
+      \\"total\\": \\"3917\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2014\\",
+        \\"Entertainment\\": \\"825\\",
+        \\"Gifts\\": \\"62\\",
+        \\"Food\\": \\"779\\",
+        \\"Transportation\\": \\"237\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2156\\",
+        \\"Merchant A\\": \\"564\\",
+        \\"Merchant E\\": \\"445\\",
+        \\"Merchant F\\": \\"516\\",
+        \\"Merchant C\\": \\"236\\"
+      }
+    },
+    \\"May\\": {
+      \\"total\\": \\"3991\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2997\\",
+        \\"Food\\": \\"496\\",
+        \\"Entertainment\\": \\"276\\",
+        \\"Gifts\\": \\"87\\",
+        \\"Transportation\\": \\"135\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2813\\",
+        \\"Merchant C\\": \\"537\\",
+        \\"Merchant A\\": \\"89\\",
+        \\"Merchant E\\": \\"552\\"
+      }
+    },
+    \\"Jun\\": {
+      \\"total\\": \\"4016\\",
+      \\"byCategory\\": {
+        \\"Entertainment\\": \\"215\\",
+        \\"Clothing\\": \\"2378\\",
+        \\"Transportation\\": \\"774\\",
+        \\"Food\\": \\"583\\",
+        \\"Gifts\\": \\"66\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant E\\": \\"185\\",
+        \\"Merchant B\\": \\"2578\\",
+        \\"Merchant C\\": \\"248\\",
+        \\"Merchant D\\": \\"691\\",
+        \\"Merchant A\\": \\"314\\"
+      }
+    },
+    \\"Jul\\": {
+      \\"total\\": \\"4886\\",
+      \\"byCategory\\": {
+        \\"Gifts\\": \\"16\\",
+        \\"Clothing\\": \\"3088\\",
+        \\"Food\\": \\"257\\",
+        \\"Transportation\\": \\"1117\\",
+        \\"Entertainment\\": \\"408\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"250\\",
+        \\"Merchant B\\": \\"2673\\",
+        \\"Merchant F\\": \\"379\\",
+        \\"Merchant D\\": \\"962\\",
+        \\"Merchant C\\": \\"273\\",
+        \\"Merchant E\\": \\"349\\"
+      }
+    },
+    \\"Aug\\": {
+      \\"total\\": \\"4528\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3318\\",
+        \\"Entertainment\\": \\"577\\",
+        \\"Transportation\\": \\"298\\",
+        \\"Gifts\\": \\"45\\",
+        \\"Food\\": \\"290\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"3173\\",
+        \\"Merchant E\\": \\"460\\",
+        \\"Merchant D\\": \\"710\\",
+        \\"Merchant C\\": \\"19\\",
+        \\"Merchant A\\": \\"166\\"
+      }
+    },
+    \\"Sep\\": {
+      \\"total\\": \\"4558\\",
+      \\"byCategory\\": {
+        \\"Food\\": \\"922\\",
+        \\"Clothing\\": \\"3003\\",
+        \\"Entertainment\\": \\"227\\",
+        \\"Transportation\\": \\"368\\",
+        \\"Gifts\\": \\"38\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"475\\",
+        \\"Merchant B\\": \\"2704\\",
+        \\"Merchant F\\": \\"252\\",
+        \\"Merchant C\\": \\"579\\",
+        \\"Merchant D\\": \\"548\\"
+      }
+    },
+    \\"Oct\\": {
+      \\"total\\": \\"5405\\",
+      \\"byCategory\\": {
+        \\"Gifts\\": \\"30\\",
+        \\"Clothing\\": \\"3421\\",
+        \\"Food\\": \\"556\\",
+        \\"Transportation\\": \\"960\\",
+        \\"Entertainment\\": \\"438\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant C\\": \\"315\\",
+        \\"Merchant B\\": \\"3584\\",
+        \\"Merchant F\\": \\"465\\",
+        \\"Merchant D\\": \\"415\\",
+        \\"Merchant A\\": \\"535\\",
+        \\"Merchant E\\": \\"91\\"
+      }
+    },
+    \\"Nov\\": {
+      \\"total\\": \\"4117\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2794\\",
+        \\"Food\\": \\"720\\",
+        \\"Entertainment\\": \\"530\\",
+        \\"Gifts\\": \\"73\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2830\\",
+        \\"Merchant F\\": \\"341\\",
+        \\"Merchant C\\": \\"435\\",
+        \\"Merchant E\\": \\"393\\",
+        \\"Merchant D\\": \\"118\\"
+      }
+    },
+    \\"Dec\\": {
+      \\"total\\": \\"4306\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3423\\",
+        \\"Entertainment\\": \\"312\\",
+        \\"Transportation\\": \\"151\\",
+        \\"Gifts\\": \\"67\\",
+        \\"Food\\": \\"353\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2943\\",
+        \\"Merchant D\\": \\"697\\",
+        \\"Merchant F\\": \\"119\\",
+        \\"Merchant C\\": \\"399\\",
+        \\"Merchant A\\": \\"148\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"4150.58\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2794.33\\",
+        \\"Gifts\\": \\"61.33\\",
+        \\"Food\\": \\"493.08\\",
+        \\"Entertainment\\": \\"364.50\\",
+        \\"Transportation\\": \\"437.33\\"
+      }
+    }
+  },
+  \\"2018\\": {
+    \\"total\\": \\"49567\\",
+    \\"Jan\\": {
+      \\"total\\": \\"3837\\",
+      \\"byCategory\\": {
+        \\"Transportation\\": \\"657\\",
+        \\"Clothing\\": \\"1833\\",
+        \\"Food\\": \\"1174\\",
+        \\"Gifts\\": \\"53\\",
+        \\"Entertainment\\": \\"120\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"587\\",
+        \\"Merchant B\\": \\"1860\\",
+        \\"Merchant C\\": \\"216\\",
+        \\"Merchant F\\": \\"155\\",
+        \\"Merchant E\\": \\"389\\",
+        \\"Merchant D\\": \\"630\\"
+      }
+    },
+    \\"Feb\\": {
+      \\"total\\": \\"3695\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2313\\",
+        \\"Transportation\\": \\"434\\",
+        \\"Food\\": \\"806\\",
+        \\"Gifts\\": \\"70\\",
+        \\"Entertainment\\": \\"72\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2727\\",
+        \\"Merchant D\\": \\"303\\",
+        \\"Merchant E\\": \\"246\\",
+        \\"Merchant A\\": \\"111\\",
+        \\"Merchant C\\": \\"287\\",
+        \\"Merchant F\\": \\"21\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"4224\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3134\\",
+        \\"Gifts\\": \\"74\\",
+        \\"Food\\": \\"806\\",
+        \\"Entertainment\\": \\"210\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2728\\",
+        \\"Merchant F\\": \\"60\\",
+        \\"Merchant C\\": \\"1016\\",
+        \\"Merchant D\\": \\"230\\",
+        \\"Merchant A\\": \\"185\\",
+        \\"Merchant E\\": \\"5\\"
+      }
+    },
+    \\"Apr\\": {
+      \\"total\\": \\"3943\\",
+      \\"byCategory\\": {
+        \\"Gifts\\": \\"96\\",
+        \\"Clothing\\": \\"2658\\",
+        \\"Entertainment\\": \\"386\\",
+        \\"Food\\": \\"555\\",
+        \\"Transportation\\": \\"248\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant C\\": \\"653\\",
+        \\"Merchant B\\": \\"2479\\",
+        \\"Merchant E\\": \\"328\\",
+        \\"Merchant F\\": \\"483\\"
+      }
+    },
+    \\"May\\": {
+      \\"total\\": \\"4964\\",
+      \\"byCategory\\": {
+        \\"Gifts\\": \\"71\\",
+        \\"Clothing\\": \\"3017\\",
+        \\"Food\\": \\"247\\",
+        \\"Entertainment\\": \\"873\\",
+        \\"Transportation\\": \\"756\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"50\\",
+        \\"Merchant B\\": \\"2999\\",
+        \\"Merchant F\\": \\"291\\",
+        \\"Merchant D\\": \\"836\\",
+        \\"Merchant E\\": \\"497\\",
+        \\"Merchant C\\": \\"291\\"
+      }
+    },
+    \\"Jun\\": {
+      \\"total\\": \\"3807\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2555\\",
+        \\"Food\\": \\"974\\",
+        \\"Transportation\\": \\"102\\",
+        \\"Gifts\\": \\"35\\",
+        \\"Entertainment\\": \\"141\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2397\\",
+        \\"Merchant F\\": \\"747\\",
+        \\"Merchant C\\": \\"427\\",
+        \\"Merchant E\\": \\"231\\",
+        \\"Merchant D\\": \\"5\\"
+      }
+    },
+    \\"Jul\\": {
+      \\"total\\": \\"4162\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"3128\\",
+        \\"Food\\": \\"595\\",
+        \\"Transportation\\": \\"147\\",
+        \\"Gifts\\": \\"66\\",
+        \\"Entertainment\\": \\"226\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2801\\",
+        \\"Merchant E\\": \\"599\\",
+        \\"Merchant D\\": \\"442\\",
+        \\"Merchant A\\": \\"242\\",
+        \\"Merchant F\\": \\"78\\"
+      }
+    },
+    \\"Aug\\": {
+      \\"total\\": \\"4135\\",
+      \\"byCategory\\": {
+        \\"Food\\": \\"362\\",
+        \\"Clothing\\": \\"2745\\",
+        \\"Gifts\\": \\"169\\",
+        \\"Entertainment\\": \\"618\\",
+        \\"Transportation\\": \\"241\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant F\\": \\"317\\",
+        \\"Merchant B\\": \\"2570\\",
+        \\"Merchant C\\": \\"487\\",
+        \\"Merchant D\\": \\"207\\",
+        \\"Merchant E\\": \\"473\\",
+        \\"Merchant A\\": \\"81\\"
+      }
+    },
+    \\"Sep\\": {
+      \\"total\\": \\"3694\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2319\\",
+        \\"Food\\": \\"551\\",
+        \\"Gifts\\": \\"99\\",
+        \\"Entertainment\\": \\"446\\",
+        \\"Transportation\\": \\"279\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2249\\",
+        \\"Merchant D\\": \\"555\\",
+        \\"Merchant C\\": \\"120\\",
+        \\"Merchant A\\": \\"312\\",
+        \\"Merchant E\\": \\"179\\",
+        \\"Merchant F\\": \\"279\\"
+      }
+    },
+    \\"Oct\\": {
+      \\"total\\": \\"4827\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"2652\\",
+        \\"Food\\": \\"946\\",
+        \\"Transportation\\": \\"899\\",
+        \\"Gifts\\": \\"55\\",
+        \\"Entertainment\\": \\"275\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant B\\": \\"2712\\",
+        \\"Merchant E\\": \\"638\\",
+        \\"Merchant D\\": \\"443\\",
+        \\"Merchant A\\": \\"298\\",
+        \\"Merchant F\\": \\"272\\",
+        \\"Merchant C\\": \\"464\\"
+      }
+    },
+    \\"Nov\\": {
+      \\"total\\": \\"4180\\",
+      \\"byCategory\\": {
+        \\"Food\\": \\"725\\",
+        \\"Clothing\\": \\"2307\\",
+        \\"Transportation\\": \\"584\\",
+        \\"Entertainment\\": \\"564\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant E\\": \\"862\\",
+        \\"Merchant B\\": \\"2307\\",
+        \\"Merchant F\\": \\"202\\",
+        \\"Merchant A\\": \\"146\\",
+        \\"Merchant C\\": \\"657\\",
+        \\"Merchant D\\": \\"6\\"
+      }
+    },
+    \\"Dec\\": {
+      \\"total\\": \\"4099\\",
+      \\"byCategory\\": {
+        \\"Transportation\\": \\"169\\",
+        \\"Clothing\\": \\"2892\\",
+        \\"Food\\": \\"625\\",
+        \\"Gifts\\": \\"117\\",
+        \\"Entertainment\\": \\"296\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant E\\": \\"350\\",
+        \\"Merchant B\\": \\"2731\\",
+        \\"Merchant D\\": \\"244\\",
+        \\"Merchant A\\": \\"296\\",
+        \\"Merchant C\\": \\"478\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"4130.58\\",
+      \\"byCategory\\": {
+        \\"Transportation\\": \\"376.33\\",
+        \\"Clothing\\": \\"2629.42\\",
+        \\"Food\\": \\"697.17\\",
+        \\"Gifts\\": \\"75.42\\",
+        \\"Entertainment\\": \\"352.25\\"
+      }
+    }
+  }
+}"
+`;

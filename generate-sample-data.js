@@ -33,16 +33,15 @@ async function writeRow(stream, curDate, index) {
 }
 
 /**
- * Generate several year's worth of data.
+ * Generate several year's worth of data to test streaming with large files.
  * Nice to have: accept start and end dates via cli args.
  */
 async function createCsv() {
-  const start = moment('2017-01-01');
+  const start = moment('2016-01-01');
   const end = moment('2018-12-31');
-  const stream = fs.createWriteStream('data/sample-data.csv');
+  const stream = fs.createWriteStream('sample-data.csv');
   let index = 1;
   for (let curDate = moment(start); curDate.diff(end, 'days') <= 0; curDate.add(1, 'days')) {
-    //console.log(m.format('YYYY-MM-DD'));
     await writeRow(stream, curDate, index);
     index += 1;
   }
