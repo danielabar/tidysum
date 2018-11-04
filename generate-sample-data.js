@@ -17,11 +17,11 @@ function randomIntFromInterval(min, max) {
 
 function genData(curDate, index) {
   const formattedDate = curDate.format('YYYY-MM-DD');
-  const amount = randomIntFromInterval(1, 300);
-  let category, merchant;
-  category =
+  const category =
     index % 2 == 0 ? CATEGORIES[randomIntFromInterval(0, CATEGORIES.length - 1)] : CATEGORIES[1];
-  merchant =
+  const amount =
+    category === 'Gifts' ? randomIntFromInterval(1, 50) : randomIntFromInterval(1, 300);
+  const merchant =
     index % 2 == 0 ? MERCHANTS[randomIntFromInterval(0, MERCHANTS.length - 1)] : MERCHANTS[1];
   return `${formattedDate},${amount},${category},${merchant}\n`;
 }
@@ -39,7 +39,7 @@ async function writeRow(stream, curDate, index) {
 async function createCsv() {
   const start = moment('2017-01-01');
   const end = moment('2018-12-31');
-  const stream = fs.createWriteStream('data/sample-data-2.csv');
+  const stream = fs.createWriteStream('data/sample-data.csv');
   let index = 1;
   for (let curDate = moment(start); curDate.diff(end, 'days') <= 0; curDate.add(1, 'days')) {
     //console.log(m.format('YYYY-MM-DD'));
