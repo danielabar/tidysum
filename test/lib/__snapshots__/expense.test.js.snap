@@ -25,6 +25,14 @@ exports[`processExpenses processFile Processes a small file with two months in e
         \\"Merchant A\\": \\"10\\",
         \\"Merchant C\\": \\"10\\"
       }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"25.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10.00\\",
+        \\"Food\\": \\"10.00\\",
+        \\"Entertainment\\": \\"5.00\\"
+      }
     }
   },
   \\"2018\\": {
@@ -49,6 +57,14 @@ exports[`processExpenses processFile Processes a small file with two months in e
       \\"byMerchant\\": {
         \\"Merchant A\\": \\"15\\",
         \\"Merchant C\\": \\"15\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"35.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15.00\\",
+        \\"Food\\": \\"12.50\\",
+        \\"Entertainment\\": \\"7.50\\"
       }
     }
   }
@@ -79,6 +95,15 @@ exports[`processExpenses processFile Processes demo data 1`] = `
       },
       \\"byMerchant\\": {
         \\"Loblaws\\": \\"11.67\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"119.97\\",
+      \\"byCategory\\": {
+        \\"Groceries\\": \\"44.15\\",
+        \\"Restaurant\\": \\"67.00\\",
+        \\"Entertainment\\": \\"3.00\\",
+        \\"Health\\": \\"5.84\\"
       }
     }
   }
