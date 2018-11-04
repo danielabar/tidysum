@@ -15,5 +15,10 @@ describe('processExpenses', function() {
       let result = await expense.process(`${process.cwd()}/test/fixtures/demo-data.csv`);
       expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
     });
+
+    it('Processes large data', async function() {
+      let result = await expense.process(`${process.cwd()}/test/fixtures/large-data.csv`);
+      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
+    });
   });
 });
