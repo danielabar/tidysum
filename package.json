@@ -7,7 +7,7 @@
     "tidysum": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/**/*.test.js"
   },
   "keywords": [
     "expenses",
@@ -24,8 +24,12 @@
     "yargs": "12.0.2"
   },
   "devDependencies": {
+    "chai": "4.2.0",
     "eslint-config-prettier": "3.1.0",
+    "eslint-plugin-mocha": "5.2.0",
     "eslint-plugin-prettier": "3.0.0",
+    "expect-mocha-snapshot": "1.0.1",
+    "mocha": "5.2.0",
     "prettier": "1.14.3"
   }
 }

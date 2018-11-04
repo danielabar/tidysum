@@ -29,3 +29,15 @@ node generate-sample-data.js
 tidysum -e data/sample-data.csv
 # check expenses.json for output
 ```
+
+**Run Tests**
+
+```shell
+npm test
+```
+
+**Regenerate Snapshots**
+
+```shell
+SNAPSHOT_UPDATE=true npm test
+```
