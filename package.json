@@ -2,6 +2,10 @@
   "name": "tidysum",
   "version": "0.0.1",
   "description": "Break down expenses into categories",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielabar/tidysum"
+  },
   "main": "index.js",
   "bin": {
     "tidysum": "./index.js"
@@ -15,6 +19,9 @@
   ],
   "author": "Daniela Baron",
   "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
   "dependencies": {
     "csv-streamify": "4.0.0",
     "decimal.js": "10.0.1",
