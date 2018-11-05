@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/danielabar/tidysum.svg?style=svg)](https://circleci.com/gh/danielabar/tidysum)
 
-> Get insights into your variable spending to help improve your savings.
+> Get insights into your variable spending to help improve savings.
 
 ## Usage
 

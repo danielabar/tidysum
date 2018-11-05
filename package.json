@@ -1,7 +1,7 @@
 {
   "name": "tidysum",
   "version": "0.0.1",
-  "description": "Break down expenses into categories",
+  "description": "Get insights into your variable spending to help improve savings.",
   "repository": {
     "type": "git",
     "url": "https://github.com/danielabar/tidysum"
@@ -14,11 +14,16 @@
     "test": "mocha test/**/*.test.js"
   },
   "keywords": [
+    "personal-finance",
     "expenses",
-    "financial"
+    "savings"
   ],
   "author": "Daniela Baron",
   "license": "MIT",
+  "homepage": "https://github.com/danielabar/tidysum",
+  "bugs": {
+    "url": "https://github.com/danielabar/tidysum/issues"
+  },
   "engines": {
     "node": ">=8"
   },

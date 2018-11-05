@@ -1,0 +1,8 @@
+test
+.circleci
+.editorconfig
+.edlintrc.js
+.nvmrc
+.prettier.js
+brainstorming.txt
+generate-sample-data.js
