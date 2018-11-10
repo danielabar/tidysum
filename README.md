@@ -7,7 +7,7 @@
 ## Usage
 
 ```shell
-tidysum --e /path/to/expenses.csv
+tidysum -e /path/to/expenses.csv
 ```
 
 Where `expenses.csv` contains entries with date (YYYY-MM-DD), amount, category and merchant as per the example below:
