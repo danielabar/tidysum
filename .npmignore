@@ -6,3 +6,7 @@ test
 .prettier.js
 brainstorming.txt
 generate-sample-data.js
+logs
+.vscode
+expenses.json
+sample-data.csv
