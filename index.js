@@ -14,5 +14,5 @@ const expense = require('./lib/expense');
 
 (async () => {
   const result = await expense.process(argv.e);
-  fs.writeFileSync('expenses.json', JSON.stringify(result, null, 2), 'utf8');
+  xfs.writeFileSync('expenses.json', JSON.stringify(result, null, 2), 'utf8');
 })();
