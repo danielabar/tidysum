@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "mocha test/**/*.test.js",
-    "lint": "eslint index.js lib test"
+    "lint": "eslint index.js lib test",
+    "dev": "NODE_ENV=test mocha test/**/*.test.js --watch"
   },
   "keywords": [
     "personal-finance",
