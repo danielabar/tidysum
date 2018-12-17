@@ -20,5 +20,19 @@ describe('processExpenses', function() {
       let result = await expense.process(`${process.cwd()}/test/fixtures/large-data.csv`);
       expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
     });
+
+    it('Includes savings recommendations', async function() {
+      let result = await expense.process(
+        `${process.cwd()}/test/fixtures/small-data.csv`,
+        1000,
+        500
+      );
+      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
+    });
+
+    it('Includes reduce spending recommendations', async function() {
+      let result = await expense.process(`${process.cwd()}/test/fixtures/small-data.csv`, 100, 90);
+      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
+    });
   });
 });
