@@ -4,6 +4,12 @@
 
 > Get insights into your variable spending to help improve savings.
 
+## Install
+
+```shell
+npm install tidysum -g
+```
+
 ## Usage
 
 ```shell
@@ -66,6 +72,33 @@ This will generate `expenses.json` with yearly and monthly breakdowns and averag
 Here you can see total spending for the year of `239.94`. Total is also calculated for each month, and each month is further broken down with totals by category and merchant.
 
 Finally an `average` section is generated for each year showing how much you spent on average each month, `119.87` in example above. And how much you spent on average in each category, for example, spending on restaurants was on average `67.00` per month.
+
+### Recommendations
+
+Tidysum can also make some recommendations about how much you could be saving or suggestion to reduce spending. To make use of this, provide your monthly income (net of tax) and fixed expenses (eg: sum of mortgage, car payments etc) as additional arguments. For example, if your monthly income is $3,000 and monthly fixed expenses are $1,000:
+
+```shell
+tidysum -e /path/to/expenses.csv -i 3000 -f 1000
+# check expenses.json for output
+```
+
+For example, if your average monthly expenditures are exceeding monthly income, tidysum will recommend you reduce spending:
+
+```javascript
+...
+"recommendation": {
+  "reduceSpendingBy": "200.00"
+}
+```
+
+On the other hand, if your monthly income exceeds expenditures, tidysum will recommend how much you could be saving each month:
+
+```javascript
+...
+"recommendation": {
+  "save": "300.00"
+}
+```
 
 ### Why not use Excel?
 
