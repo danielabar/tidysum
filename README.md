@@ -130,6 +130,14 @@ tidysum -e sample-data.csv
 npm test
 ```
 
+**TDD**
+
+Run tests continuously watching for changes:
+
+```shell
+npm run dev
+```
+
 **Regenerate Snapshots**
 
 ```shell
