@@ -11,8 +11,9 @@
     "tidysum": "./index.js"
   },
   "scripts": {
-    "test": "mocha test/**/*.test.js",
-    "lint": "eslint index.js lib test"
+    "test": "NODE_ENV=test mocha test/**/*.test.js",
+    "lint": "eslint index.js lib test",
+    "dev": "NODE_ENV=test mocha test/**/*.test.js --watch"
   },
   "keywords": [
     "personal-finance",

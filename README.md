@@ -4,6 +4,12 @@
 
 > Get insights into your variable spending to help improve savings.
 
+## Install
+
+```shell
+npm install tidysum -g
+```
+
 ## Usage
 
 ```shell
@@ -67,6 +73,39 @@ Here you can see total spending for the year of `239.94`. Total is also calculat
 
 Finally an `average` section is generated for each year showing how much you spent on average each month, `119.87` in example above. And how much you spent on average in each category, for example, spending on restaurants was on average `67.00` per month.
 
+### Recommendations
+
+Tidysum can also make some recommendations about how much you could be saving or suggestion to reduce spending. It will also calculate how much you should have saved to cover 6 and 12 months worth of living expenses. To make use of this, provide your monthly income (net of tax) and fixed expenses (eg: sum of mortgage, utilities, car payments etc) as additional arguments.
+
+For example, if your monthly income is $3,000 and monthly fixed expenses are $1,000:
+
+```shell
+tidysum -e /path/to/expenses.csv -i 3000 -f 1000
+# check expenses.json for output
+```
+
+If your total monthly expenditures (calculated average based on variable expenses + fixed expenses) are exceeding monthly income, tidysum will recommend you reduce spending. For example, if tidysum determines your average variable expenses are 2200, then 2200 + fixed of 1000 is 3200, which exceeds monthly income by 200, so it would recommend to reduce monthly spending by 200:
+
+```javascript
+...
+"recommendation": {
+  "reduceSpendingBy": "200.00",
+  "save6MonthsExpenses": "19200",
+  "save12MonthsExpenses": "38400"
+}
+```
+
+On the other hand, if your monthly income exceeds expenditures, tidysum will recommend how much you could be saving each month. For example, if your average variable expenses are 1700, then 1700 + fixed of 1000 is 2700, which is less than monthly income of 3000, by 300, so it would recommend to save 300 each month:
+
+```javascript
+...
+"recommendation": {
+  "save": "300.00",
+  "save6MonthsExpenses": "16200",
+  "save12MonthsExpenses": "32400"
+}
+```
+
 ### Why not use Excel?
 
 Well, not everyone has Excel (or enjoys working with it). And even with Libre Office, some of the functions don't work quite as documented, and the result is static, not useful if you want dynamically discovered categories.
@@ -89,6 +128,14 @@ tidysum -e sample-data.csv
 
 ```shell
 npm test
+```
+
+**TDD**
+
+Run tests continuously watching for changes:
+
+```shell
+npm run dev
 ```
 
 **Regenerate Snapshots**

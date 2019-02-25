@@ -1,5 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`processExpenses processFile Includes reduce spending recommendations 1`] = `
+"{
+  \\"2017\\": {
+    \\"total\\": \\"50\\",
+    \\"Jan\\": {
+      \\"total\\": \\"30\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10\\",
+        \\"Food\\": \\"20\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"10\\",
+        \\"Merchant B\\": \\"20\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"20\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10\\",
+        \\"Entertainment\\": \\"10\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"10\\",
+        \\"Merchant C\\": \\"10\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"25.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10.00\\",
+        \\"Food\\": \\"10.00\\",
+        \\"Entertainment\\": \\"5.00\\"
+      }
+    },
+    \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"690\\",
+      \\"save12MonthsExpenses\\": \\"1380\\",
+      \\"reduceSpendingBy\\": \\"15\\"
+    }
+  },
+  \\"2018\\": {
+    \\"total\\": \\"70\\",
+    \\"Jan\\": {
+      \\"total\\": \\"40\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15\\",
+        \\"Food\\": \\"25\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"15\\",
+        \\"Merchant B\\": \\"25\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"30\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15\\",
+        \\"Entertainment\\": \\"15\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"15\\",
+        \\"Merchant C\\": \\"15\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"35.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15.00\\",
+        \\"Food\\": \\"12.50\\",
+        \\"Entertainment\\": \\"7.50\\"
+      }
+    },
+    \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"750\\",
+      \\"save12MonthsExpenses\\": \\"1500\\",
+      \\"reduceSpendingBy\\": \\"25\\"
+    }
+  }
+}"
+`;
+
+exports[`processExpenses processFile Includes savings recommendations 1`] = `
+"{
+  \\"2017\\": {
+    \\"total\\": \\"50\\",
+    \\"Jan\\": {
+      \\"total\\": \\"30\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10\\",
+        \\"Food\\": \\"20\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"10\\",
+        \\"Merchant B\\": \\"20\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"20\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10\\",
+        \\"Entertainment\\": \\"10\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"10\\",
+        \\"Merchant C\\": \\"10\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"25.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"10.00\\",
+        \\"Food\\": \\"10.00\\",
+        \\"Entertainment\\": \\"5.00\\"
+      }
+    },
+    \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"3150\\",
+      \\"save12MonthsExpenses\\": \\"6300\\",
+      \\"save\\": \\"475\\"
+    }
+  },
+  \\"2018\\": {
+    \\"total\\": \\"70\\",
+    \\"Jan\\": {
+      \\"total\\": \\"40\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15\\",
+        \\"Food\\": \\"25\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"15\\",
+        \\"Merchant B\\": \\"25\\"
+      }
+    },
+    \\"Mar\\": {
+      \\"total\\": \\"30\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15\\",
+        \\"Entertainment\\": \\"15\\"
+      },
+      \\"byMerchant\\": {
+        \\"Merchant A\\": \\"15\\",
+        \\"Merchant C\\": \\"15\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"35.00\\",
+      \\"byCategory\\": {
+        \\"Clothing\\": \\"15.00\\",
+        \\"Food\\": \\"12.50\\",
+        \\"Entertainment\\": \\"7.50\\"
+      }
+    },
+    \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"3210\\",
+      \\"save12MonthsExpenses\\": \\"6420\\",
+      \\"save\\": \\"465\\"
+    }
+  }
+}"
+`;
+
 exports[`processExpenses processFile Processes a small file with two months in each of two years 1`] = `
 "{
   \\"2017\\": {
