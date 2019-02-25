@@ -35,6 +35,8 @@ exports[`processExpenses processFile Includes reduce spending recommendations 1`
       }
     },
     \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"690\\",
+      \\"save12MonthsExpenses\\": \\"1380\\",
       \\"reduceSpendingBy\\": \\"15\\"
     }
   },
@@ -71,6 +73,8 @@ exports[`processExpenses processFile Includes reduce spending recommendations 1`
       }
     },
     \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"750\\",
+      \\"save12MonthsExpenses\\": \\"1500\\",
       \\"reduceSpendingBy\\": \\"25\\"
     }
   }
@@ -112,6 +116,8 @@ exports[`processExpenses processFile Includes savings recommendations 1`] = `
       }
     },
     \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"3150\\",
+      \\"save12MonthsExpenses\\": \\"6300\\",
       \\"save\\": \\"475\\"
     }
   },
@@ -148,6 +154,8 @@ exports[`processExpenses processFile Includes savings recommendations 1`] = `
       }
     },
     \\"recommendation\\": {
+      \\"save6MonthsExpenses\\": \\"3210\\",
+      \\"save12MonthsExpenses\\": \\"6420\\",
       \\"save\\": \\"465\\"
     }
   }

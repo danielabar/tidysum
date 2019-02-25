@@ -75,28 +75,34 @@ Finally an `average` section is generated for each year showing how much you spe
 
 ### Recommendations
 
-Tidysum can also make some recommendations about how much you could be saving or suggestion to reduce spending. To make use of this, provide your monthly income (net of tax) and fixed expenses (eg: sum of mortgage, car payments etc) as additional arguments. For example, if your monthly income is $3,000 and monthly fixed expenses are $1,000:
+Tidysum can also make some recommendations about how much you could be saving or suggestion to reduce spending. It will also calculate how much you should have saved to cover 6 and 12 months worth of living expenses. To make use of this, provide your monthly income (net of tax) and fixed expenses (eg: sum of mortgage, utilities, car payments etc) as additional arguments.
+
+For example, if your monthly income is $3,000 and monthly fixed expenses are $1,000:
 
 ```shell
 tidysum -e /path/to/expenses.csv -i 3000 -f 1000
 # check expenses.json for output
 ```
 
-For example, if your average monthly expenditures are exceeding monthly income, tidysum will recommend you reduce spending:
+If your total monthly expenditures (calculated average based on variable expenses + fixed expenses) are exceeding monthly income, tidysum will recommend you reduce spending. For example, if tidysum determines your average variable expenses are 2200, then 2200 + fixed of 1000 is 3200, which exceeds monthly income by 200, so it would recommend to reduce monthly spending by 200:
 
 ```javascript
 ...
 "recommendation": {
-  "reduceSpendingBy": "200.00"
+  "reduceSpendingBy": "200.00",
+  "save6MonthsExpenses": "19200",
+  "save12MonthsExpenses": "38400"
 }
 ```
 
-On the other hand, if your monthly income exceeds expenditures, tidysum will recommend how much you could be saving each month:
+On the other hand, if your monthly income exceeds expenditures, tidysum will recommend how much you could be saving each month. For example, if your average variable expenses are 1700, then 1700 + fixed of 1000 is 2700, which is less than monthly income of 3000, by 300, so it would recommend to save 300 each month:
 
 ```javascript
 ...
 "recommendation": {
-  "save": "300.00"
+  "save": "300.00",
+  "save6MonthsExpenses": "16200",
+  "save12MonthsExpenses": "32400"
 }
 ```
 
