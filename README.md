@@ -2,18 +2,16 @@
 
 [![CircleCI](https://circleci.com/gh/danielabar/tidysum.svg?style=svg)](https://circleci.com/gh/danielabar/tidysum)
 
-> Get insights into your variable spending to help improve savings.
+> A budget is telling your money where to go instead of wondering where it went.
+>
+> -- <cite>Dave Ramsey</cite>
 
-## Install
-
-```shell
-npm install tidysum -g
-```
+Tidysum is an npm module to help you get insights into your variable spending and improve savings. It analyzes variable spending and reports on total and average spending by category by month and year. It can also make suggestions on how much to save each month or if spending needs to be reduced, and advises on total savings needed for 6 and 12 months worth of total living expenses.
 
 ## Usage
 
 ```shell
-tidysum -e /path/to/expenses.csv
+npx tidysum -e /path/to/expenses.csv
 ```
 
 Where `expenses.csv` contains entries with date (YYYY-MM-DD), amount, category and merchant as per the example below:
@@ -80,7 +78,7 @@ Tidysum can also make some recommendations about how much you could be saving or
 For example, if your monthly income is $3,000 and monthly fixed expenses are $1,000:
 
 ```shell
-tidysum -e /path/to/expenses.csv -i 3000 -f 1000
+npx tidysum -e /path/to/expenses.csv -i 3000 -f 1000
 # check expenses.json for output
 ```
 
