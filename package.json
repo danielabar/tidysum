@@ -13,7 +13,8 @@
   "scripts": {
     "test": "NODE_ENV=test mocha test/**/*.test.js",
     "lint": "eslint index.js lib test",
-    "dev": "NODE_ENV=test mocha test/**/*.test.js --watch"
+    "dev": "NODE_ENV=test mocha test/**/*.test.js --watch",
+    "temp": "NODE_ENV=test mocha test/**/*.test.js -g 'percentage difference' --watch"
   },
   "keywords": [
     "personal-finance",

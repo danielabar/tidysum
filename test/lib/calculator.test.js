@@ -42,4 +42,56 @@ describe('calculator', () => {
       expect(expenseSummary['2017'].average).to.deep.equal(expectedAvg);
     });
   });
+
+  describe('calcYearlyDiff', () => {
+    it('calculates percentage difference in categories compared to previous year', () => {
+      // Given
+      const summary = {
+        2019: {
+          average: {
+            byCategory: {
+              groceries: 900,
+              gifts: 100,
+            },
+          },
+        },
+        2020: {
+          average: {
+            byCategory: {
+              groceries: 1000,
+              gifts: 80,
+            },
+          },
+        },
+      };
+      const summaryWithDiff = {
+        2019: {
+          average: {
+            byCategory: {
+              groceries: 900,
+              gifts: 100,
+            },
+          },
+          percentageDiffPreviousYear: 'N/A',
+        },
+        2020: {
+          average: {
+            byCategory: {
+              groceries: 1000,
+              gifts: 80,
+            },
+          },
+          percentageDiffPreviousYear: {
+            groceries: 11.11,
+            gifts: -20,
+          },
+        },
+      };
+      // When
+      calculator.calcYearlyDiff(summary);
+      // Then
+      console.log(JSON.stringify(summary, null, 2));
+      expect(summary).to.eql(summaryWithDiff);
+    });
+  });
 });
