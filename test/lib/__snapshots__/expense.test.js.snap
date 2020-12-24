@@ -79,6 +79,7 @@ exports[`processExpenses processFile Includes reduce spending recommendations 1`
       \\"reduceSpendingBy\\": \\"25\\"
     },
     \\"percentageDiffPreviousYear\\": {
+      \\"total\\": \\"40\\",
       \\"Clothing\\": \\"50\\",
       \\"Food\\": \\"25\\",
       \\"Entertainment\\": \\"50\\"
@@ -166,6 +167,7 @@ exports[`processExpenses processFile Includes savings recommendations 1`] = `
       \\"save\\": \\"465\\"
     },
     \\"percentageDiffPreviousYear\\": {
+      \\"total\\": \\"40\\",
       \\"Clothing\\": \\"50\\",
       \\"Food\\": \\"25\\",
       \\"Entertainment\\": \\"50\\"
@@ -243,6 +245,7 @@ exports[`processExpenses processFile Processes a small file with two months in e
       }
     },
     \\"percentageDiffPreviousYear\\": {
+      \\"total\\": \\"40\\",
       \\"Clothing\\": \\"50\\",
       \\"Food\\": \\"25\\",
       \\"Entertainment\\": \\"50\\"
@@ -739,6 +742,7 @@ exports[`processExpenses processFile Processes large data 1`] = `
       }
     },
     \\"percentageDiffPreviousYear\\": {
+      \\"total\\": \\"5.57\\",
       \\"Clothing\\": \\"5.54\\",
       \\"Gifts\\": \\"-41.22\\",
       \\"Food\\": \\"23.94\\",
@@ -968,6 +972,7 @@ exports[`processExpenses processFile Processes large data 1`] = `
       }
     },
     \\"percentageDiffPreviousYear\\": {
+      \\"total\\": \\"-0.48\\",
       \\"Transportation\\": \\"-13.95\\",
       \\"Clothing\\": \\"-5.9\\",
       \\"Food\\": \\"41.39\\",

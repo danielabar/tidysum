@@ -44,10 +44,11 @@ describe('calculator', () => {
   });
 
   describe('calcYearlyDiff', () => {
-    it('calculates percentage difference in categories compared to previous year', () => {
+    it('calculates percentage difference in total and categories compared to previous year', () => {
       // Given
       const summary = {
         '2019': {
+          total: '20000',
           average: {
             byCategory: {
               groceries: '900',
@@ -56,6 +57,7 @@ describe('calculator', () => {
           },
         },
         '2020': {
+          total: '25000',
           average: {
             byCategory: {
               groceries: '1000',
@@ -66,6 +68,7 @@ describe('calculator', () => {
       };
       const expectedSummaryWithDiff = {
         '2019': {
+          total: '20000',
           average: {
             byCategory: {
               groceries: '900',
@@ -75,6 +78,7 @@ describe('calculator', () => {
           percentageDiffPreviousYear: 'N/A',
         },
         '2020': {
+          total: '25000',
           average: {
             byCategory: {
               groceries: '1000',
@@ -82,6 +86,7 @@ describe('calculator', () => {
             },
           },
           percentageDiffPreviousYear: {
+            total: '25',
             groceries: '11.11',
             gifts: '-20',
           },
@@ -97,6 +102,7 @@ describe('calculator', () => {
       // Given
       const summary = {
         '2019': {
+          total: '20000',
           average: {
             byCategory: {
               groceries: '900',
@@ -104,6 +110,7 @@ describe('calculator', () => {
           },
         },
         '2020': {
+          total: '25000',
           average: {
             byCategory: {
               groceries: '1000',
@@ -114,6 +121,7 @@ describe('calculator', () => {
       };
       const expectedSummaryWithDiff = {
         '2019': {
+          total: '20000',
           average: {
             byCategory: {
               groceries: '900',
@@ -122,6 +130,7 @@ describe('calculator', () => {
           percentageDiffPreviousYear: 'N/A',
         },
         '2020': {
+          total: '25000',
           average: {
             byCategory: {
               groceries: '1000',
@@ -129,6 +138,7 @@ describe('calculator', () => {
             },
           },
           percentageDiffPreviousYear: {
+            total: '25',
             groceries: '11.11',
             vitamins: 'new category',
           },
