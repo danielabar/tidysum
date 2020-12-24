@@ -290,6 +290,47 @@ exports[`processExpenses processFile Processes demo data 1`] = `
       }
     },
     \\"percentageDiffPreviousYear\\": \\"N/A\\"
+  },
+  \\"2019\\": {
+    \\"total\\": \\"162.49\\",
+    \\"Oct\\": {
+      \\"total\\": \\"150\\",
+      \\"byCategory\\": {
+        \\"Groceries\\": \\"120\\",
+        \\"Restaurant\\": \\"20\\",
+        \\"Entertainment\\": \\"10.00\\"
+      },
+      \\"byMerchant\\": {
+        \\"Loblaws\\": \\"120\\",
+        \\"Dominos\\": \\"20\\",
+        \\"Apple\\": \\"10.00\\"
+      }
+    },
+    \\"Nov\\": {
+      \\"total\\": \\"12.49\\",
+      \\"byCategory\\": {
+        \\"Health\\": \\"12.49\\"
+      },
+      \\"byMerchant\\": {
+        \\"Whole Foods\\": \\"12.49\\"
+      }
+    },
+    \\"average\\": {
+      \\"monthly\\": \\"81.25\\",
+      \\"byCategory\\": {
+        \\"Groceries\\": \\"60.00\\",
+        \\"Restaurant\\": \\"10.00\\",
+        \\"Entertainment\\": \\"5.00\\",
+        \\"Health\\": \\"6.25\\"
+      }
+    },
+    \\"percentageDiffPreviousYear\\": {
+      \\"total\\": \\"-32.28\\",
+      \\"Groceries\\": \\"35.9\\",
+      \\"Restaurant\\": \\"-85.07\\",
+      \\"Entertainment\\": \\"66.67\\",
+      \\"Health\\": \\"7.02\\"
+    }
   }
 }"
 `;
