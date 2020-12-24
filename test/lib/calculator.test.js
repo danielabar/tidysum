@@ -47,51 +47,97 @@ describe('calculator', () => {
     it('calculates percentage difference in categories compared to previous year', () => {
       // Given
       const summary = {
-        2019: {
+        '2019': {
           average: {
             byCategory: {
-              groceries: 900,
-              gifts: 100,
+              groceries: '900',
+              gifts: '100',
             },
           },
         },
-        2020: {
+        '2020': {
           average: {
             byCategory: {
-              groceries: 1000,
-              gifts: 80,
+              groceries: '1000',
+              gifts: '80',
             },
           },
         },
       };
-      const summaryWithDiff = {
-        2019: {
+      const expectedSummaryWithDiff = {
+        '2019': {
           average: {
             byCategory: {
-              groceries: 900,
-              gifts: 100,
+              groceries: '900',
+              gifts: '100',
             },
           },
           percentageDiffPreviousYear: 'N/A',
         },
-        2020: {
+        '2020': {
           average: {
             byCategory: {
-              groceries: 1000,
-              gifts: 80,
+              groceries: '1000',
+              gifts: '80',
             },
           },
           percentageDiffPreviousYear: {
-            groceries: 11.11,
-            gifts: -20,
+            groceries: '11.11',
+            gifts: '-20',
           },
         },
       };
       // When
       calculator.calcYearlyDiff(summary);
       // Then
-      console.log(JSON.stringify(summary, null, 2));
-      expect(summary).to.eql(summaryWithDiff);
+      expect(summary).to.eql(expectedSummaryWithDiff);
+    });
+
+    it('detects a new category in the current year', () => {
+      // Given
+      const summary = {
+        '2019': {
+          average: {
+            byCategory: {
+              groceries: '900',
+            },
+          },
+        },
+        '2020': {
+          average: {
+            byCategory: {
+              groceries: '1000',
+              vitamins: '90',
+            },
+          },
+        },
+      };
+      const expectedSummaryWithDiff = {
+        '2019': {
+          average: {
+            byCategory: {
+              groceries: '900',
+            },
+          },
+          percentageDiffPreviousYear: 'N/A',
+        },
+        '2020': {
+          average: {
+            byCategory: {
+              groceries: '1000',
+              vitamins: '90',
+            },
+          },
+          percentageDiffPreviousYear: {
+            groceries: '11.11',
+            vitamins: 'new category',
+          },
+        },
+      };
+      // When
+      calculator.calcYearlyDiff(summary);
+      // Then
+      expect(summary).to.eql(expectedSummaryWithDiff);
     });
   });
 });
