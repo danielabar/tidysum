@@ -38,7 +38,8 @@ exports[`processExpenses processFile Includes reduce spending recommendations 1`
       \\"save6MonthsExpenses\\": \\"690\\",
       \\"save12MonthsExpenses\\": \\"1380\\",
       \\"reduceSpendingBy\\": \\"15\\"
-    }
+    },
+    \\"percentageDiffPreviousYear\\": \\"N/A\\"
   },
   \\"2018\\": {
     \\"total\\": \\"70\\",
@@ -76,6 +77,11 @@ exports[`processExpenses processFile Includes reduce spending recommendations 1`
       \\"save6MonthsExpenses\\": \\"750\\",
       \\"save12MonthsExpenses\\": \\"1500\\",
       \\"reduceSpendingBy\\": \\"25\\"
+    },
+    \\"percentageDiffPreviousYear\\": {
+      \\"Clothing\\": \\"50\\",
+      \\"Food\\": \\"25\\",
+      \\"Entertainment\\": \\"50\\"
     }
   }
 }"
@@ -119,7 +125,8 @@ exports[`processExpenses processFile Includes savings recommendations 1`] = `
       \\"save6MonthsExpenses\\": \\"3150\\",
       \\"save12MonthsExpenses\\": \\"6300\\",
       \\"save\\": \\"475\\"
-    }
+    },
+    \\"percentageDiffPreviousYear\\": \\"N/A\\"
   },
   \\"2018\\": {
     \\"total\\": \\"70\\",
@@ -157,6 +164,11 @@ exports[`processExpenses processFile Includes savings recommendations 1`] = `
       \\"save6MonthsExpenses\\": \\"3210\\",
       \\"save12MonthsExpenses\\": \\"6420\\",
       \\"save\\": \\"465\\"
+    },
+    \\"percentageDiffPreviousYear\\": {
+      \\"Clothing\\": \\"50\\",
+      \\"Food\\": \\"25\\",
+      \\"Entertainment\\": \\"50\\"
     }
   }
 }"
@@ -195,7 +207,8 @@ exports[`processExpenses processFile Processes a small file with two months in e
         \\"Food\\": \\"10.00\\",
         \\"Entertainment\\": \\"5.00\\"
       }
-    }
+    },
+    \\"percentageDiffPreviousYear\\": \\"N/A\\"
   },
   \\"2018\\": {
     \\"total\\": \\"70\\",
@@ -228,6 +241,11 @@ exports[`processExpenses processFile Processes a small file with two months in e
         \\"Food\\": \\"12.50\\",
         \\"Entertainment\\": \\"7.50\\"
       }
+    },
+    \\"percentageDiffPreviousYear\\": {
+      \\"Clothing\\": \\"50\\",
+      \\"Food\\": \\"25\\",
+      \\"Entertainment\\": \\"50\\"
     }
   }
 }"
@@ -267,7 +285,8 @@ exports[`processExpenses processFile Processes demo data 1`] = `
         \\"Entertainment\\": \\"3.00\\",
         \\"Health\\": \\"5.84\\"
       }
-    }
+    },
+    \\"percentageDiffPreviousYear\\": \\"N/A\\"
   }
 }"
 `;
@@ -497,7 +516,8 @@ exports[`processExpenses processFile Processes large data 1`] = `
         \\"Entertainment\\": \\"352.50\\",
         \\"Transportation\\": \\"429.25\\"
       }
-    }
+    },
+    \\"percentageDiffPreviousYear\\": \\"N/A\\"
   },
   \\"2017\\": {
     \\"total\\": \\"49807\\",
@@ -717,6 +737,13 @@ exports[`processExpenses processFile Processes large data 1`] = `
         \\"Entertainment\\": \\"364.50\\",
         \\"Transportation\\": \\"437.33\\"
       }
+    },
+    \\"percentageDiffPreviousYear\\": {
+      \\"Clothing\\": \\"5.54\\",
+      \\"Gifts\\": \\"-41.22\\",
+      \\"Food\\": \\"23.94\\",
+      \\"Entertainment\\": \\"3.4\\",
+      \\"Transportation\\": \\"1.88\\"
     }
   },
   \\"2018\\": {
@@ -939,6 +966,13 @@ exports[`processExpenses processFile Processes large data 1`] = `
         \\"Gifts\\": \\"75.42\\",
         \\"Entertainment\\": \\"352.25\\"
       }
+    },
+    \\"percentageDiffPreviousYear\\": {
+      \\"Transportation\\": \\"-13.95\\",
+      \\"Clothing\\": \\"-5.9\\",
+      \\"Food\\": \\"41.39\\",
+      \\"Gifts\\": \\"22.97\\",
+      \\"Entertainment\\": \\"-3.36\\"
     }
   }
 }"
