@@ -1,4 +1,4 @@
-const expect = require('expect');
+const expect = require('chai');
 const expense = require('../../lib/expense');
 
 describe('processExpenses', function() {
