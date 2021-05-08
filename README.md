@@ -168,6 +168,8 @@ npm i
 npm link
 node generate-sample-data.js
 tidysum -e sample-data.csv
+# OR to try out validation errors
+tidysum -e test/fixtures/invalid-data.csv
 # check expenses.json for output
 ```
 

@@ -15,7 +15,7 @@
     "lint": "eslint index.js lib test",
     "dev": "NODE_ENV=test mocha test/**/*.test.js --watch",
     "temp": "NODE_ENV=test mocha test/**/*.test.js -g 'calcYearlyDiff' --watch",
-    "temp2": "NODE_ENV=test mocha test/**/*.test.js -g 'percentDiff' --watch"
+    "temp2": "NODE_ENV=test mocha test/**/*.test.js -g 'Contains validation errors' --watch"
   },
   "keywords": [
     "personal-finance",
