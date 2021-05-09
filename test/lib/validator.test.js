@@ -7,27 +7,21 @@ describe('validator', () => {
 
     beforeEach(() => {
       output = {
-        hasErrors: false,
-        errorLines: [],
+        lineErrors: [],
       };
     });
 
-    it('sets errors when number of fields is less than 4 and date field is invalid', () => {
+    it('sets errors when number of fields is greater than 4 and date field is invalid', () => {
       // Given
       const line = ['2021-04', '05', '78.34', 'Groceries', 'Metro', 'foo'];
       // When
       validator.validateLine(line, output);
       // Then
       const expectedOutput = {
-        hasErrors: true,
-        errorLines: [
+        lineErrors: [
           {
             line: '2021-04,05,78.34,Groceries,Metro,foo',
-            description: 'Expected 4 fields, got 6.',
-          },
-          {
-            line: '2021-04,05,78.34,Groceries,Metro,foo',
-            description: 'Date format must be YYYY-MM-DD.',
+            errors: ['Expected 4 fields, got 6.', 'Date format must be YYYY-MM-DD.'],
           },
         ],
       };
@@ -41,11 +35,10 @@ describe('validator', () => {
       validator.validateLine(line, output);
       // Then
       const expectedOutput = {
-        hasErrors: true,
-        errorLines: [
+        lineErrors: [
           {
             line: '2021-04-05,78.34,Groceries',
-            description: 'Expected 4 fields, got 3.',
+            errors: ['Expected 4 fields, got 3.'],
           },
         ],
       };
@@ -59,26 +52,24 @@ describe('validator', () => {
       validator.validateLine(line, output);
       // Then
       const expectedOutput = {
-        hasErrors: true,
-        errorLines: [
+        lineErrors: [
           {
             line: '2021-04,78.34,Groceries,Metro',
-            description: 'Date format must be YYYY-MM-DD.',
+            errors: ['Date format must be YYYY-MM-DD.'],
           },
         ],
       };
       expect(output).to.deep.equal(expectedOutput);
     });
 
-    it('is valid when number of fields is 4', () => {
+    it('does not report any errors when input line is valid', () => {
       // Given
       const line = ['2021-04-05', '78.34', 'Groceries', 'Metro'];
       // When
       validator.validateLine(line, output);
       // Then
       const expectedOutput = {
-        hasErrors: false,
-        errorLines: [],
+        lineErrors: [],
       };
       expect(output).to.deep.equal(expectedOutput);
     });
