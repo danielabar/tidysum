@@ -62,6 +62,23 @@ describe('validator', () => {
       expect(output).to.deep.equal(expectedOutput);
     });
 
+    it('sets error when amount is not numeric', () => {
+      // Given
+      const line = ['2021-04-27', '1o7.e8', 'Groceries', 'Metro'];
+      // When
+      validator.validateLine(line, output);
+      // Then
+      const expectedOutput = {
+        lineErrors: [
+          {
+            line: '2021-04-27,1o7.e8,Groceries,Metro',
+            errors: ['Amount must be numeric.'],
+          },
+        ],
+      };
+      expect(output).to.deep.equal(expectedOutput);
+    });
+
     it('does not report any errors when input line is valid', () => {
       // Given
       const line = ['2021-04-05', '78.34', 'Groceries', 'Metro'];
