@@ -1,38 +1,28 @@
-const expect = require('expect');
-const toMatchSnapshot = require('expect-mocha-snapshot');
+const { expect } = require('chai');
 const expense = require('../../lib/expense');
 
-expect.extend({ toMatchSnapshot });
-
 describe('processExpenses', function() {
-  describe('processFile', function() {
-    it('Processes a small file with two months in each of two years', async function() {
-      let result = await expense.process(`${process.cwd()}/test/fixtures/small-data.csv`);
-      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
-    });
+  describe('process', function() {
+    it('Contains validation errors', async function() {
+      const result = await expense.process(`${process.cwd()}/test/fixtures/invalid-data.csv`);
 
-    it('Processes demo data', async function() {
-      let result = await expense.process(`${process.cwd()}/test/fixtures/demo-data.csv`);
-      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
-    });
+      const expectedResult = {
+        hasErrors: true,
+        lineErrors: [
+          {
+            line: '2021-04,29,194.32,Groceries,Metro',
+            errors: ['Expected 4 fields, got 5.', 'Date format must be YYYY-MM-DD.'],
+          },
+          {
+            line: '2021-04-30,45.87,Electronics',
+            errors: ['Expected 4 fields, got 3.'],
+          },
+        ],
+      };
+      expect(result).to.deep.equal(expectedResult);
 
-    it('Processes large data', async function() {
-      let result = await expense.process(`${process.cwd()}/test/fixtures/large-data.csv`);
-      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
-    });
-
-    it('Includes savings recommendations', async function() {
-      let result = await expense.process(
-        `${process.cwd()}/test/fixtures/small-data.csv`,
-        1000,
-        500
-      );
-      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
-    });
-
-    it('Includes reduce spending recommendations', async function() {
-      let result = await expense.process(`${process.cwd()}/test/fixtures/small-data.csv`, 100, 90);
-      expect(JSON.stringify(result, null, 2)).toMatchSnapshot(this);
+      // Doesn't process year results from file due to validation errors
+      expect(result).not.to.have.any.keys('2021');
     });
   });
 });

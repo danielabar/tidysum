@@ -22,8 +22,13 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help').argv;
 const expense = require('./lib/expense');
+const logger = require('./lib/logger');
 
 (async () => {
   const result = await expense.process(argv.e, argv.i, argv.f);
+  if (result.hasErrors) {
+    logger.error('Please fix the following errors in input file and try again:');
+    logger.error(JSON.stringify(result.lineErrors, null, 2));
+  }
   fs.writeFileSync('expenses.json', JSON.stringify(result, null, 2), 'utf8');
 })();
